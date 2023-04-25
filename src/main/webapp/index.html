@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico">
+        
+        <title>folderwatcher</title>
+        
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="styles/featherlight.css" rel="stylesheet">
+          
+    </head>
+    <body id="homepage" class="main" onload = "browseFolder()">
+
+        <header>
+            <h1>*folderwatcher*</h1>
+            <div id="timerDisplay"></div>
+            <input type="text" class="time-input" placeholder="">
+            <button id="clickButton">Start</button>
+        </header>
+
+        <!-- readme -->
+        <div class="icon example">
+            <a class="readme-icon" href="#" data-featherlight="#lightbox" data-featherlight-variant="custom-lightbox glitch-child glitch-child-1">readme.txt</a>
+            <a class="readme-icon" href="#" data-featherlight="#lightbox" data-featherlight-variant="custom-lightbox glitch-child glitch-child-2">readme.txt</a>
+            <a class="readme-icon" href="#" data-featherlight="#lightbox" data-featherlight-variant="custom-lightbox glitch-child glitch-child-3">readme.txt</a>
+            <div class="hidden-lightbox lightbox-content" id="lightbox">
+                <h2>-Description: -</h2>
+                <p>Browser-based HTML/JavaScript client that displays the content of the remote shared folder,</p><p>each n seconds, n being an input parameter.</p>
+                <p>For simplicity, we will only consider depth 0, i.e., we will ignore the content of subfolders.</p><p>So, if and only if any file or subfolder directly under the remote shared folder is created,</p><p>deleted, or renamed, then such a change should be tracked and displayed by the client.</p>
+                <h3>- How to Use: -</h3>
+                <p>-Input n in a text field.</p>
+                <p>-Click a button to start receiving remote content updates each n seconds, and update the local</p><p>content display (inside the browser) accordingly.</p>
+                <p>-Click the same button, whose caption should have changed from start to stop, to stop receiving</p><p>remote content updates</p>
+                <h3>- Known Bugs: -</h3>
+                <p>-Major graphical bug where the content diplayed keeps shifting down with each update.</p>
+                <h3>- Credits: -</h3>
+                <p>The design of the website drew heavily from:</p>
+                <p>https://criticalmediartstudio.com/witnessing/</p>
+                <p>by criticalmediartstudio.</p>
+            </div>
+        </div>
+
+        <!-- Featherlight Box -->
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+        <script src="scripts/featherlight.js"></script>
+        <script src="scripts/browse-folder.js"></script>
+        <script src="scripts/index.js"></script>
+        
+    </body>
+</html>
